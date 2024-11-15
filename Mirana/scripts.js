@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
             aboutMeElement.textContent = currentText.substring(0, charIndex++);
             if (charIndex === currentText.length) {
                 isDeleting = true;
-                setTimeout(type, 2000); // Pause before deleting
+                setTimeout(type, 2000);
                 return;
             }
         }
@@ -143,7 +143,7 @@ window.addEventListener('load', () => {
         init();
     });
 });
-// Background effect (simulates moving particles)
+
 const particleCanvas = document.getElementById('particleCanvas');
 const ctx = particleCanvas.getContext('2d');
 
@@ -172,7 +172,7 @@ function createParticles() {
 
 function animateParticles() {
     ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
-    ctx.fillStyle = 'rgba(0, 128, 255, 0.8)'; // Glowing blue color
+    ctx.fillStyle = 'rgba(0, 128, 255, 0.8)'; 
 
     particles.forEach(particle => {
         particle.x += particle.speedX;
@@ -193,8 +193,6 @@ createParticles();
 animateParticles();
 
 window.addEventListener('load', () => {
-    // Existing JavaScript code...
 
-    // Ensure the custom cursor is applied
     document.body.classList.add('custom-cursor');
 });
